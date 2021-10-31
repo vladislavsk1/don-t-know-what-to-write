@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main()
+{
+int choiceUser = 0;
+printf("Type the tipe of variable\n");
+printf("char(1), int(2), long long(3)\n");
+printf("Your choice: ");
+scanf("%d", &choiceUser);
+int factorial = 0;
+printf("Enter the factorial you want to see\n");
+printf("You entered: ");
+scanf("%d", &factorial);
+if (choiceUser == 1)
+{
+char number = 1;
+for (int i = 2; i <= factorial; ++i)
+{
+number *= i;
+if (number * i <= number)
+{
+printf("Fail at %d number", i);
+return 1;
+}
+}
+printf("%d", number);
+}
+else if (choiceUser == 2)
+{
+int number = 1;
+for (int i = 2; i <= factorial; ++i)
+{
+number *= i;
+if (number * i <= number)
+{
+printf("Fail at %d number", i);
+return 1;
+}
+}
+printf("%d", number);
+}
+else if (choiceUser == 3)
+{
+long long number = 1;
+for (int i = 2; i <= factorial; ++i)
+{
+number *= i;
+if (number * i <= number)
+{
+printf("Fail at %d number", i);
+return 1;
+}
+}
+printf("%lli", number);
+}
+return 0;
+}

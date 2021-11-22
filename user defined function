@@ -1,0 +1,43 @@
+#include <stdio.h>
+ 
+void startProgram()
+{
+    printf("Program started. Program calculate the integral of number.\n");
+}
+ 
+void sizeNumber(int number)
+{
+    if (number <= 12)
+        printf("You entered number <= 12. It is ok.\n");
+}
+ 
+int breakProgram()
+{
+    printf("You entered number > 12. Too much.\n");
+    return 1;
+}
+ 
+int calculateIntegral(int userChoice)
+{
+    int result = 1;
+    for (int i = 1; i <= userChoice; ++i)
+    {
+        result *= i;
+    }
+    return result;
+}
+ 
+int main()
+{
+    int userChoice = 0;
+    startProgram();
+    printf("Type the number: ");
+    scanf("%d", &userChoice);
+    sizeNumber(userChoice);
+    if (userChoice > 12)
+        if (breakProgram() == 1)
+            return 1;
+    printf("The result of factorial: ");
+    printf("%d", calculateIntegral(userChoice));
+    return 0;
+}

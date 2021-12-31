@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+double sinX(double x)
+{
+    double numerator = 1.0,
+        currentNumber = 0.0,
+        summ = 0.0,
+        denominator = 1.0,
+        factorial = 0.0;
+    int partDenominator = 0;
+    numerator *= x;
+    summ += x / 2;
+    for (int k = 1; k < 15; ++k)
+    {
+        partDenominator = (2 * k) + 1;
+        denominator = 1.0;
+        factorial = 1;
+        for (int i = 2; i <= partDenominator; ++i)
+            factorial *= i;
+        numerator *= -x * x;
+        denominator *= factorial * pow(2, partDenominator);
+        currentNumber = numerator / denominator;
+        summ += currentNumber;
+    }
+    return summ;
+}
+
+int main()
+{
+    for (double x = -10; x <= 10; ++x)
+    {
+        printf("%f   mySinX = %f,   math.hSinX = %f\n", x, sinX(x), sin(x/2));
+    }
+    return 0;
+}

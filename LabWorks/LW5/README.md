@@ -1,5 +1,5 @@
 # In this work, we work with an array of characters. Actions:
-## • enter a string
+### • enter a string
 ### •output string before sorting
 #### •sort the string and output it
 ##### •display 0 and the last character of the string (as requested, output the elements whose ASCII indices are minimum and maximum)

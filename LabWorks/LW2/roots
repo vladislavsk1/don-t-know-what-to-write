@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+
+double function(double x)
+{
+    return sin(x / 2);
+}
+
+double calculateRoot(double a, double b, double delta_x)
+{
+    double middleInterval = 0.0;
+    while (fabs(b - a) > delta_x)
+    {
+        middleInterval = (a + b) / 2;
+        if (function(a) + function(middleInterval) < 0)
+            b = middleInterval;
+        else if (function(b) * function(middleInterval) < 0)
+            a = middleInterval;
+        else
+        {
+            printf("The root is not found\n");
+            return 1;
+        }
+    } 
+    return middleInterval;
+}
+
+int main()
+{
+    double a = M_PI / 2,
+        b = 2.5 * M_PI,
+        delta_x = 0.0001;
+    if (function(a) * function(b) > 0)
+    {
+        printf("Incorrect input\n");
+        return 1;
+    }
+    printf("Root by ditix = %f\n", calculateRoot(a, b, delta_x));
+    return 0;
+}

@@ -7,11 +7,11 @@ int main()
         b = M_PI,
         x,
         delta_x = 0.01;
-    //printf("Enter a, b, delta_x\n");
-    //scanf("%f", &a);
-    //scanf("%f", &b);
-    //scanf("%f", &delta_x);
-    //printf("a = %10.2f; b = %10.2f; delta_x = %10.2f\n", a, b, delta_x);
+    printf("Enter a, b, delta_x\n");
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &delta_x);
+    printf("a = %10.2f; b = %10.2f; delta_x = %10.2f\n", a, b, delta_x);
     printf("\tx\t\tsin(x/2)\t\tsin\'(x/2)\t\tsin\'(x/2)\t\tsin\'\'(x/2)\t\tsin\'\'(x/2)\n");
     x = a;
     while (x < b)

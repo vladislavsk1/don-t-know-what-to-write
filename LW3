@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+ 
+int main()
+{
+    float a = 0.,
+        b = M_PI,
+        x,
+        delta_x = 0.01;
+    //printf("Enter a, b, delta_x\n");
+    //scanf("%f", &a);
+    //scanf("%f", &b);
+    //scanf("%f", &delta_x);
+    //printf("a = %10.2f; b = %10.2f; delta_x = %10.2f\n", a, b, delta_x);
+    printf("\tx\t\tsin(x/2)\t\tsin\'(x/2)\t\tsin\'(x/2)\t\tsin\'\'(x/2)\t\tsin\'\'(x/2)\n");
+    x = a;
+    while (x < b)
+    {
+        printf("%10.2f\t%10.2f\t%10.2f\t", x, sin(x/2), ((sin(x/2 + delta_x) - sin(x/2)) / delta_x));
+        printf("%10.2f\t", (sin(x/2 + (delta_x/2)) - sin(x/2 - (delta_x/2))) / delta_x);
+        printf("%10.2f\t", (sin(x/2 + 2*delta_x) - 2*sin(x/2 + delta_x) + sin(x/2)) / (delta_x*delta_x));
+        printf("%10.2f\n", (sin(x/2 + delta_x) - 2*sin(x/2) + sin(x/2 - delta_x)) / (delta_x*delta_x));
+        x += delta_x;
+    }
+    return 0;
+}

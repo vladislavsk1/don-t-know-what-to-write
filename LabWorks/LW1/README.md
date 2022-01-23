@@ -6,3 +6,5 @@
 ![150686961-ec38bc3b-d792-4742-9ed0-437afb18df9a](https://user-images.githubusercontent.com/90961411/150687698-8b8071a7-5cdd-44e9-90c0-c0192dfac1f6.png)
 
 In the work we consider 2 functions - main, sinX. In main, we call the sin(x) calculation function, which requires a loop to include in the range [-10;10]. In the sinX function, we calculate the value of the sine as intended.
+# Image from Gnuplot:
+![Без названия (2)](https://user-images.githubusercontent.com/90961411/150690755-e924ad52-e5dc-4095-9362-33843fd89011.png)
